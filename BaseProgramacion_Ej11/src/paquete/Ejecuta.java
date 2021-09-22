@@ -40,18 +40,20 @@ public class Ejecuta {
 		int anoAhora = Calendar.getInstance().get(Calendar.YEAR);
 		Scanner sc = new Scanner(System.in);
 		
-		boolean continuar = true;
 		
-		do {
-			System.out.println("Introduzca nombre");
-			nombre = sc.nextLine();
-			
-			if (nombre.equals("fin")) {
-				continuar = false;
-
-			} else {
-				System.out.println("Introduzca año de nacimiento");
+		//nombre  |  nombreMenor  |  anoNacimiento  |  edad  |  contEdad  |  suma  |  media  |  menor  |  anoAhora  |  mensaje
+		//======================================================================================================================
+		// María        ""/null          1997           24	      0           0               2147483647    2021    
+		// Pedro        Pedro            2000           21        1        00+24=>24             21       
+		// fin													  2		   24+21=>45   22.5
+		
+		System.out.println("Introduzca nombre");
+		nombre = sc.nextLine();
+		
+		while (nombre.equals("fin") == false) {
+			System.out.println("Introduzca año de nacimiento");
 				anoNacimiento = Integer.valueOf(sc.nextLine());
+				
 				contEdad++;
 				
 				edad = anoAhora - anoNacimiento;
@@ -66,10 +68,12 @@ public class Ejecuta {
 					menor = edad;
 					nombreMenor = nombre;
 				}
-			}
-		} while (continuar);
-		sc.close();
+				System.out.println("Introduzca nombre");
+				nombre = sc.nextLine();
+		}
+ 		sc.close();
 		
+ 		//Si hemos llegado a pedir algún nombre, la variable contEdad tendrá un valor > 0
 		if (contEdad > 0) {
 			media =  (float) suma / contEdad;
 			mensaje = "El más joven se llama " + nombreMenor + " y la media de edad es " + media;
