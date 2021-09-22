@@ -13,7 +13,7 @@ public class Ejecuta {
 		
 		int numero;
 		int resto;
-		boolean primo = true;
+		boolean primo;
 		String mensaje;
 		Scanner sc = new Scanner(System.in);
 		
@@ -24,21 +24,18 @@ public class Ejecuta {
 		System.out.println("Introduzca numero");
 		numero = sc.nextInt();
 		
-		for (int candidatoDivisor = 2; candidatoDivisor < numero && primo == true; candidatoDivisor++) {
-			resto = numero%candidatoDivisor;
+		if (numero < 2) {
+			primo = false;
+		} else {
+			primo = true;
 			
-			if (resto == 0) {
-				primo = false;
-			}	
+			for (int candidatoDivisor = 2; candidatoDivisor < numero && primo; candidatoDivisor++) {
+				resto = numero%candidatoDivisor;
+				
+				if (resto == 0) primo = false;
+			}
 		}
 		//if abreviado
-		/*
-		 * if (primo) {
-		 * 		mensaje = "Es primo";
-		 * } else {
-		 * 		mensaje = "No es primo";
-		 * }
-		 */
 		mensaje = (primo)?"Es primo":"No es primo";
 		System.out.println(mensaje);
 		
