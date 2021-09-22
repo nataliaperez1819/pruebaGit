@@ -41,6 +41,7 @@ public class Ejecuta {
 		 */
 		mensaje = (primo)?"Es primo":"No es primo";
 		System.out.println(mensaje);
+		
 		sc.close();
 	}
 }
