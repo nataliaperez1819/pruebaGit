@@ -7,10 +7,10 @@ public class Ejecuta {
 
 	public static void main(String[] args) {
 		/*
-		 	Programa que lee nombre y año de nacimiento de una serie de alumnos hasta introducir
-			como nombre de alumno “fin”. En ese momento mostrará la edad media de los alumnos y
-			el nombre del alumno menor. NOTA: Al introducir como nombre “fin”, no nos ha de pedir el
-			año de nacimiento.
+		 	Programa que lee nombre y aÃ±o de nacimiento de una serie de alumnos hasta introducir
+			como nombre de alumno â€œfinâ€�. En ese momento mostrarÃ¡ la edad media de los alumnos y
+			el nombre del alumno menor. NOTA: Al introducir como nombre â€œfinâ€�, no nos ha de pedir el
+			aÃ±o de nacimiento.
 
 		 */
 		
@@ -21,7 +21,7 @@ public class Ejecuta {
 		System.out.println("Introduzca numero");
 		//numero = sc.nextInt(); //ERROR
 		//numero = Integer.parseInt(sc.nextLine());
-		numero = Integer.valueOf(sc.nextLine()); //Cuando Scanner tenga que capturar números y texto, pasar el tipo primitivo (número) a String para que no salte ningun problema
+		numero = Integer.valueOf(sc.nextLine()); //Cuando Scanner tenga que capturar nÃºmeros y texto, pasar el tipo primitivo (nÃºmero) a String para que no salte ningun problema
 		
 		System.out.println("Introduzca apellido");
 		apellido = sc.nextLine();
@@ -43,7 +43,7 @@ public class Ejecuta {
 		
 		//nombre  |  nombreMenor  |  anoNacimiento  |  edad  |  contEdad  |  suma  |  media  |  menor  |  anoAhora  |  mensaje
 		//======================================================================================================================
-		// María        ""/null          1997           24	      0           0               2147483647    2021    
+		// MarÃ­a        ""/null          1997           24	      0           0               2147483647    2021    
 		// Pedro        Pedro            2000           21        1        00+24=>24             21       
 		// fin													  2		   24+21=>45   22.5
 		
@@ -51,7 +51,7 @@ public class Ejecuta {
 		nombre = sc.nextLine();
 		
 		while (nombre.equals("fin") == false) {
-			System.out.println("Introduzca año de nacimiento");
+			System.out.println("Introduzca aÃ±o de nacimiento");
 				anoNacimiento = Integer.valueOf(sc.nextLine());
 				
 				contEdad++;
@@ -73,14 +73,14 @@ public class Ejecuta {
 		}
  		sc.close();
 		
- 		//Si hemos llegado a pedir algún nombre, la variable contEdad tendrá un valor > 0
+ 		//Si hemos llegado a pedir algÃºn nombre, la variable contEdad tendrÃ¡ un valor > 0
 		if (contEdad > 0) {
 			media =  (float) suma / contEdad;
-			mensaje = "El más joven se llama " + nombreMenor + " y la media de edad es " + media;
+			mensaje = "El mÃ¡s joven se llama " + nombreMenor + " y la media de edad es " + media;
 			System.out.println(mensaje);
 		}
 		
-	}
+	} 
 	
-	//fin
+	//fin del programa
 }
