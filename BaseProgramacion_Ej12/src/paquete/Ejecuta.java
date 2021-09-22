@@ -13,14 +13,7 @@ public class Ejecuta {
 		
 		int resto;
 		boolean primo;
-		//String mensaje;
-		//Scanner sc = new Scanner(System.in);
-		
-		/*System.out.println("Introduzca numero");
-		numero = sc.nextInt();*/
-		
-		//Debemos probar con los número comprendidos entre 1 y 100
-		
+
 		for (int numero = 1; numero <= 100; numero++) {
 			primo = true;
 			
@@ -36,10 +29,5 @@ public class Ejecuta {
 				System.out.println(numero);
 			}
 		}
-		//if abreviado
-		//mensaje = (primo)?"Es primo":"No es primo";
-		//System.out.println(mensaje);
-		
-		//sc.close();
 	}
 }
