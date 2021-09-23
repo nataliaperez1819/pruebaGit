@@ -1,10 +1,10 @@
-package paquete;
+package clases;
 
 public class Vacaciones {
 
 	//Campos
 	private int dias;
-	private String destino;
+	protected String destino;
 	private boolean playa;
 	
 	//Constructores
@@ -33,8 +33,4 @@ public class Vacaciones {
 		System.out.println(texto);
 	
 	}
-	
-	
-	
-	
 }
