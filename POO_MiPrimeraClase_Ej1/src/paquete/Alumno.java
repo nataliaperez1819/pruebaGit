@@ -22,15 +22,22 @@ public class Alumno {
 	//Métodos
 	public void mostrar() {
 		String mensaje;
-		mensaje = "NOMBRE: " + this.nombre + "\n"
-				+ "PRIMER APELLIDO: " + this.apellido1 + "\n"
-				+ "SEGUNDO APELLIDO: " + this.apellido2 + "\n";
+		mensaje = "NOMBRE: " + nombre + "\n" //"this." opcional porque no hay variables locales en el método que se llamen igual
+				+ "PRIMER APELLIDO: " + apellido1 + "\n"
+				+ "SEGUNDO APELLIDO: " + apellido2 + "\n";
 		System.out.println(mensaje);
 	}
-	
-	public int sumarNotas(int nota1, int nota2) {
+	//Sobrecarga o Overloading de métodos
+	public int sumarNotas(int p_nota1, int p_nota2) {
 		int resultado;
-		resultado = nota1 + nota2;
+		resultado = p_nota1 + p_nota2; //"p_" para distinguir más facilmente que es un parámetro del constructor (sobre todo cuando hay mucho código)
+		
+		return resultado;
+	}
+	
+	public float sumarNotas(float p_nota1, float p_nota2) {
+		float resultado;
+		resultado = p_nota1 + p_nota2; //"p_" para distinguir más facilmente que es un parámetro del constructor (sobre todo cuando hay mucho código)
 		
 		return resultado;
 	}
