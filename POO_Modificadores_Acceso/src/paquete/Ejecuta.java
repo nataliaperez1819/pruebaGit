@@ -3,8 +3,13 @@ package paquete;
 public class Ejecuta {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
+		//Instancia de la clase Vacaciones
+		Vacaciones vacacionesAlberto = new Vacaciones(14, "Canarias", true);
+
+		//vacacionesAlberto.destino = "Canarias";
+		vacacionesAlberto.mostrar();
+		
 	}
 
 }
