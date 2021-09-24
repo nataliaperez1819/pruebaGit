@@ -3,6 +3,7 @@ package clases;
 public class Movil {
 
 	//Campos
+	private int imei;
 	private int memoria;
 	private String marca;
 	private int tamanoPantalla;
@@ -11,7 +12,8 @@ public class Movil {
 	public Movil() {
 	}
 	
-	public Movil(int memoria, String marca, int tamanoPantalla) {
+	public Movil(int imei, int memoria, String marca, int tamanoPantalla) {
+		this.imei = imei;
 		this.memoria = memoria;
 		this.marca = marca;
 		this.tamanoPantalla = tamanoPantalla;
@@ -19,6 +21,10 @@ public class Movil {
 	
 	//Métodos
 	//---Getters---
+	public int getImei() {
+		return imei;
+	}
+	
 	public int getMemoria() {
 		return memoria;
 	}
@@ -30,12 +36,16 @@ public class Movil {
 	public int getTamanoPantalla() {
 		return tamanoPantalla;
 	}
-	
+
 	//---Setters---
+	public void setImei(int imei) {
+		this.imei = imei;
+	}
+	
 	public void setMemoria(int memoria) {
 		this.memoria = memoria;
 	}
-	
+
 	public void setMarca(String marca) {
 		this.marca = marca;
 	}
@@ -49,13 +59,20 @@ public class Movil {
 	public String toString() {
 		String texto;
 		
-		texto = "MEMORIA: " + memoria + "\n"
+		texto = "IMEI: " + imei + "\n"
+				+ "MEMORIA: " + memoria + "\n"
 				+ "MARCA: " + marca + "\n"
 				+ "TAMAÑO PANTALLA: " + tamanoPantalla + "\n";
 		
 		return texto;
 	}
 	
+	@Override
+	public boolean equals(Object obj) {
+		
+		return super.equals(obj);
+	}
+
 	//---Estándar---
 	//Método que aumenta en 1 Gb la memoria
 	public void aumentarMemoria() {
