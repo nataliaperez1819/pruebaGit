@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public interface ICRUD<MODELO, PK> {
 
-	ArrayList<MODELO> listar();
+	ArrayList<MODELO> listar() throws Exception;
 	MODELO leer(PK pk);
 	
 	void nuevo(MODELO modelo)throws Exception;

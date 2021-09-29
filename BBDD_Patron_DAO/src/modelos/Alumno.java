@@ -24,8 +24,9 @@ public class Alumno {
 	//Métodos
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return super.toString();
+		return "MATRÍCULA: " + matricula + "\n"
+				+ "APELLIDO: " + apellido + "\n"
+				+ "NOMBRE: " + nombre + "\n";
 	}
 
 	
